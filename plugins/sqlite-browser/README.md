@@ -2,7 +2,7 @@
 
 Open SQLite databases in an Orca editor tab. Browse every table, view, index and trigger, and scroll or filter through millions of rows without leaving Orca. It only reads: nothing in the database changes.
 
-![SQLite Browser showing the tracks table of a music database, with the tables, views, indexes and triggers listed on the left](../../assets/brennanb2025.sqlite-browser/tracks.png)
+![SQLite Browser showing the tracks table of a music database, with its tables, views and triggers listed on the left](../../assets/brennanb2025.sqlite-browser/tracks.png)
 
 ![Filtering rows in a light theme, with a cell's full value shown below the grid](../../assets/brennanb2025.sqlite-browser/filter.png)
 

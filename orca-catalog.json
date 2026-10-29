@@ -41,6 +41,42 @@
               "kind": "terminalThemes",
               "name": "Catppuccin Latte"
             }
+          ],
+          "images": {
+            "cover": {
+              "path": "assets/brennanb2025.catppuccin/mocha.png",
+              "alt": "Catppuccin Mocha in Orca: a TypeScript file above a terminal showing a git log and the 16 terminal colors",
+              "sha256": "da1b05bfe6873a455069ed08f55f36189fde2270221c6063ce556e2425fd35ef",
+              "width": 1600,
+              "height": 1000
+            },
+            "screenshots": [
+              {
+                "path": "assets/brennanb2025.catppuccin/latte.png",
+                "alt": "Catppuccin Latte in Orca: the same TypeScript file and terminal in light mode",
+                "sha256": "b507f15dd3ae86ca619dbaddb3af2e594da53249d99bd7ce240159dd79cccbc7",
+                "width": 1600,
+                "height": 1000
+              }
+            ]
+          },
+          "themePreview": [
+            {
+              "label": "Catppuccin Mocha",
+              "base": "dark",
+              "background": "#1e1e2e",
+              "foreground": "#cdd6f4",
+              "accent": "#cba6f7",
+              "surface": "#181825"
+            },
+            {
+              "label": "Catppuccin Latte",
+              "base": "light",
+              "background": "#eff1f5",
+              "foreground": "#4c4f69",
+              "accent": "#8839ef",
+              "surface": "#e6e9ef"
+            }
           ]
         }
       ]
@@ -74,7 +110,25 @@
               "kind": "iconThemes",
               "name": "Material Icons (Light)"
             }
-          ]
+          ],
+          "images": {
+            "cover": {
+              "path": "assets/brennanb2025.material-icons/dark.png",
+              "alt": "Material Icons in Orca's file explorer and editor tabs, dark mode",
+              "sha256": "0d372d31c4545f22403861ebbb9589cba9327db3cdc4f991d63800eeac9a3c85",
+              "width": 1600,
+              "height": 1000
+            },
+            "screenshots": [
+              {
+                "path": "assets/brennanb2025.material-icons/light.png",
+                "alt": "Material Icons (Light) in Orca's file explorer and editor tabs, light mode",
+                "sha256": "86642fbb7e7237556b6c724f8c8a642e7a4f0e28862e6ab58257cda4008ff18a",
+                "width": 1600,
+                "height": 1000
+              }
+            ]
+          }
         }
       ]
     },
@@ -117,7 +171,25 @@
             "sqlite",
             "sqlite3",
             "db3"
-          ]
+          ],
+          "images": {
+            "cover": {
+              "path": "assets/brennanb2025.sqlite-browser/tracks.png",
+              "alt": "A SQLite database open in Orca: tables in a sidebar, the tracks table and the selected cell's value",
+              "sha256": "d67d50ea182604fed2673c5faf856ae8c30a143bc5659ba74f061644bf65d4cf",
+              "width": 1600,
+              "height": 1000
+            },
+            "screenshots": [
+              {
+                "path": "assets/brennanb2025.sqlite-browser/filter.png",
+                "alt": "The same table filtered to rows matching neon, in light mode",
+                "sha256": "c724bb03167fb308b71e40e24da08d0451d368a6f73679f67fc16a1614aa798d",
+                "width": 1600,
+                "height": 1000
+              }
+            ]
+          }
         }
       ]
     }
