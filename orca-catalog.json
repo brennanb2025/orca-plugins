@@ -148,8 +148,8 @@
       "releases": [
         {
           "version": "1.0.0",
-          "commit": "c147581a09ae10adb80d18cc7be871339757cf66",
-          "contentHash": "c61e7f56e02fb77b992d0a5b7f0bf478b508f5c4b380d9a636460f93cf15ec88",
+          "commit": "fd2defc482f057e76c05b3fabf6fa23a2586d592",
+          "contentHash": "18ece2d633f81153236f402e2ec13461016e7b5cbb9e90d0c2634c15006da2a1",
           "execution": "sandboxed-ui",
           "minimumOrca": "1.4.245",
           "name": "SQLite Browser",
