@@ -1,0 +1,85 @@
+name: Validate catalog
+
+on:
+  workflow_dispatch:
+    inputs:
+      write:
+        description: Write the release entries of changed plugins into orca-catalog.json and commit them
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+env:
+  # Orca commit whose validator the catalog is checked with: the Plugin Alpha head (stablyai/orca#35470)
+  # until plugins ship on main. Bump it deliberately.
+  ORCA_REF: 50436a7b2122ef11870103101c89831b773cbafa
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out catalog
+        uses: actions/checkout@v4
+        with:
+          path: catalog
+          # Why full history: releases pin the last commit that changed each plugin directory.
+          fetch-depth: 0
+          # Kept only when writing, so the commit step can push.
+          persist-credentials: ${{ inputs.write == true }}
+
+      - name: Check out Orca
+        uses: actions/checkout@v4
+        with:
+          repository: stablyai/orca
+          ref: ${{ env.ORCA_REF }}
+          path: orca
+          persist-credentials: false
+
+      - uses: pnpm/action-setup@v4
+        with:
+          package_json_file: orca/package.json
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+          cache-dependency-path: orca/pnpm-lock.yaml
+
+      # Why no install scripts: the validator needs only the JavaScript dependencies, not Electron.
+      - name: Install Orca validator
+        working-directory: orca
+        run: |
+          pnpm install --frozen-lockfile --ignore-scripts
+          pnpm run build:packages
+
+      - name: Check plugins/ release entries are current
+        if: ${{ inputs.write != true }}
+        working-directory: catalog
+        env:
+          ORCA_DIR: ${{ github.workspace }}/orca
+        run: node scripts/release-entry.mjs
+
+      - name: Write and commit release entries
+        if: ${{ inputs.write == true }}
+        working-directory: catalog
+        env:
+          ORCA_DIR: ${{ github.workspace }}/orca
+        run: |
+          node scripts/release-entry.mjs --write
+          if git diff --quiet -- orca-catalog.json; then
+            echo "release entries already current"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Update release entries" -- orca-catalog.json
+            git push
+          fi
+
+      - name: Validate catalog, releases and images
+        working-directory: catalog
+        env:
+          ORCA_DIR: ${{ github.workspace }}/orca
+        run: node scripts/check-catalog.mjs
