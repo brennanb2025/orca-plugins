@@ -1,0 +1,44 @@
+{
+  "$schema": "https://raw.githubusercontent.com/stablyai/orca/main/docs/schemas/plugins/orca-catalog.v2.schema.json",
+  "catalogVersion": 2,
+  "name": "Brennan's Orca Plugins",
+  "owner": "brennanb2025",
+  "plugins": [
+    {
+      "id": "brennanb2025.catppuccin",
+      "source": {
+        "kind": "git",
+        "url": "https://github.com/brennanb2025/orca-plugins.git",
+        "ref": "main",
+        "path": "plugins/catppuccin"
+      },
+      "description": "Soothing pastel themes for Orca: Mocha for dark mode and Latte for light mode, with matching code and terminal colors.",
+      "categories": ["themes"],
+      "releases": []
+    },
+    {
+      "id": "brennanb2025.material-icons",
+      "source": {
+        "kind": "git",
+        "url": "https://github.com/brennanb2025/orca-plugins.git",
+        "ref": "main",
+        "path": "plugins/material-icons"
+      },
+      "description": "Colorful Material file icons for about 470 file types and names, with a variant for light themes.",
+      "categories": ["icons"],
+      "releases": []
+    },
+    {
+      "id": "brennanb2025.sqlite-browser",
+      "source": {
+        "kind": "git",
+        "url": "https://github.com/brennanb2025/orca-plugins.git",
+        "ref": "main",
+        "path": "plugins/sqlite-browser"
+      },
+      "description": "Open SQLite databases in an editor tab: browse every table, view, index and trigger, and scroll or filter millions of rows. Read-only.",
+      "categories": ["editors", "data"],
+      "releases": []
+    }
+  ]
+}
