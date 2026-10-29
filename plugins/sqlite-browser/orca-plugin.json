@@ -9,7 +9,7 @@
   "license": "MIT",
   "repository": "https://github.com/brennanb2025/orca-plugins/tree/main/plugins/sqlite-browser",
   "engines": {
-    "orca": ">=1.4.244"
+    "orca": ">=1.4.245"
   },
   "contributes": {
     "customEditors": [

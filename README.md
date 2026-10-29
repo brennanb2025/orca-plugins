@@ -16,7 +16,7 @@ Three plugins for [Orca](https://github.com/stablyai/orca), installable from thi
 
 ## Install
 
-These plugins need Orca 1.4.244 or later with plugins turned on.
+These plugins need Orca 1.4.245 or later with plugins turned on.
 
 1. In Orca, open **Settings → Plugins**.
 2. Open the add menu, choose **Catalog sources…**, paste `https://github.com/brennanb2025/orca-plugins.git` and press **Add source**.
