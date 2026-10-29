@@ -3,10 +3,10 @@
 names='black red green yellow blue magenta cyan white'
 printf '\n  normal  '
 i=0
-for name in $names; do printf '\033[4%dm      \033[0m ' "$i"; i=$((i + 1)); done
+for name in $names; do printf '\033[4%dm       \033[0m ' "$i"; i=$((i + 1)); done
 printf '\n  bright  '
 i=0
-for name in $names; do printf '\033[10%dm      \033[0m ' "$i"; i=$((i + 1)); done
+for name in $names; do printf '\033[10%dm       \033[0m ' "$i"; i=$((i + 1)); done
 printf '\n          '
-for name in $names; do printf '%-7s' "$name"; done
+for name in $names; do printf '%-8s' "$name"; done
 printf '\n\n'
