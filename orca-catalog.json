@@ -13,8 +13,37 @@
         "path": "plugins/catppuccin"
       },
       "description": "Soothing pastel themes for Orca: Mocha for dark mode and Latte for light mode, with matching code and terminal colors.",
-      "categories": ["themes"],
-      "releases": []
+      "categories": [
+        "themes"
+      ],
+      "releases": [
+        {
+          "version": "1.0.0",
+          "commit": "c147581a09ae10adb80d18cc7be871339757cf66",
+          "contentHash": "b5d96d27a561acba4fdd3703373708b01ff25101fef806a3503a3701951e0b62",
+          "execution": "data",
+          "minimumOrca": "1.4.245",
+          "name": "Catppuccin for Orca",
+          "contributes": [
+            {
+              "kind": "themes",
+              "name": "Catppuccin Mocha"
+            },
+            {
+              "kind": "themes",
+              "name": "Catppuccin Latte"
+            },
+            {
+              "kind": "terminalThemes",
+              "name": "Catppuccin Mocha"
+            },
+            {
+              "kind": "terminalThemes",
+              "name": "Catppuccin Latte"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "brennanb2025.material-icons",
@@ -25,8 +54,29 @@
         "path": "plugins/material-icons"
       },
       "description": "Colorful Material file icons for about 470 file types and names, with a variant for light themes.",
-      "categories": ["icons"],
-      "releases": []
+      "categories": [
+        "icons"
+      ],
+      "releases": [
+        {
+          "version": "1.0.0",
+          "commit": "c147581a09ae10adb80d18cc7be871339757cf66",
+          "contentHash": "b9d4f49002763aa97e4bf38f8b881b2050668f0fe31017cf8bcb1f5450f46871",
+          "execution": "data",
+          "minimumOrca": "1.4.245",
+          "name": "Material Icon Theme",
+          "contributes": [
+            {
+              "kind": "iconThemes",
+              "name": "Material Icons"
+            },
+            {
+              "kind": "iconThemes",
+              "name": "Material Icons (Light)"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "brennanb2025.sqlite-browser",
@@ -37,8 +87,39 @@
         "path": "plugins/sqlite-browser"
       },
       "description": "Open SQLite databases in an editor tab: browse every table, view, index and trigger, and scroll or filter millions of rows. Read-only.",
-      "categories": ["editors", "data"],
-      "releases": []
+      "categories": [
+        "editors",
+        "data"
+      ],
+      "releases": [
+        {
+          "version": "1.0.0",
+          "commit": "c147581a09ae10adb80d18cc7be871339757cf66",
+          "contentHash": "c61e7f56e02fb77b992d0a5b7f0bf478b508f5c4b380d9a636460f93cf15ec88",
+          "execution": "sandboxed-ui",
+          "minimumOrca": "1.4.245",
+          "name": "SQLite Browser",
+          "contributes": [
+            {
+              "kind": "customEditors",
+              "name": "SQLite",
+              "detail": ".db, .sqlite, .sqlite3, .db3"
+            }
+          ],
+          "fileTypes": [
+            "db",
+            "sqlite",
+            "sqlite3",
+            "db3"
+          ],
+          "editorFileTypes": [
+            "db",
+            "sqlite",
+            "sqlite3",
+            "db3"
+          ]
+        }
+      ]
     }
   ]
 }
